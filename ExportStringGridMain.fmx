@@ -1,0 +1,317 @@
+object FormTest: TFormTest
+  Left = 0
+  Top = 0
+  Caption = 'Test de FMX.StringGridHelper'
+  ClientHeight = 597
+  ClientWidth = 801
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 801.000000000000000000
+    Size.Height = 597.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      801s
+      571s
+      801s
+      571s)
+    object StringGrid: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 213.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'StringGrid aliment'#233' par LiveBindings'
+      ExplicitSize.cx = 213.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object StringGrid1: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 801.000000000000000000
+        Size.Height = 480.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowCount = 30
+        OnHeaderClick = StringGrid1HeaderClick
+        OnDrawColumnHeader = StringGrid1DrawColumnHeader
+        OnDrawColumnCell = StringGrid1DrawColumnCell
+        OnCellClick = StringGrid1CellClick
+        Viewport.Width = 781.000000000000000000
+        Viewport.Height = 455.000000000000000000
+      end
+      object Layout1: TLayout
+        Align = Bottom
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Position.Y = 480.000000000000000000
+        Size.Width = 801.000000000000000000
+        Size.Height = 91.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object doAddHeader: TCheckBox
+          Position.X = 608.000000000000000000
+          Position.Y = 6.000000000000000000
+          TabOrder = 0
+          Text = 'Ajouter Ent'#234'te'
+        end
+        object CharSeparateur: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          MaxLength = 1
+          Position.X = 608.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 41.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          object ClearEditButton1: TClearEditButton
+            CanFocus = False
+            Cursor = crArrow
+            Size.Width = 17.000000000000000000
+            Size.Height = 18.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+        end
+        object Label2: TLabel
+          Position.X = 656.000000000000000000
+          Position.Y = 32.000000000000000000
+          Text = 'Caract'#232're s'#233'parateur'
+          TabOrder = 2
+        end
+        object Rectangle1: TRectangle
+          Align = Left
+          Fill.Kind = None
+          Padding.Left = 5.000000000000000000
+          Padding.Bottom = 4.000000000000000000
+          Position.X = 449.000000000000000000
+          Position.Y = 10.000000000000000000
+          Sides = [Left]
+          Size.Width = 152.000000000000000000
+          Size.Height = 81.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claLightgray
+          object rdbSelbyCell: TRadioButton
+            Align = Top
+            GroupName = 'Selection'
+            Position.X = 5.000000000000000000
+            Size.Width = 147.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'S'#233'lection par cellule'
+          end
+          object btnCells: TButton
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 95.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'S'#233'lection de Cellules'
+            TextSettings.WordWrap = True
+            OnClick = btnCellsClick
+          end
+        end
+        object Rectangle2: TRectangle
+          Align = Left
+          Fill.Kind = None
+          Padding.Left = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Position.Y = 10.000000000000000000
+          Sides = [Left]
+          Size.Width = 449.000000000000000000
+          Size.Height = 81.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claLightgray
+          object rdbRowselected: TRadioButton
+            Align = Top
+            GroupName = 'Selection'
+            IsChecked = True
+            Position.X = 5.000000000000000000
+            Size.Width = 444.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'S'#233'lection ligne enti'#232're'
+            OnChange = rdbRowselectedChange
+          end
+          object btnAll: TButton
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Toute la grille'
+            OnClick = btnAllClick
+          end
+          object btnSelCols: TButton
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Position.X = 104.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'S'#233'lection de Colonnes'
+            TextSettings.WordWrap = True
+            OnClick = btnSelColsClick
+          end
+          object btnSelLignes: TButton
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Position.X = 198.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 89.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = 'S'#233'lection de Lignes'
+            TextSettings.WordWrap = True
+            OnClick = btnSelLignesClick
+          end
+          object btnCellRange: TButton
+            Align = Left
+            Margins.Left = 5.000000000000000000
+            Position.X = 292.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 130.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Text = 'S'#233'lection de Colonnes et Lignes'
+            TextSettings.WordWrap = True
+            OnClick = btnCellRangeClick
+          end
+        end
+        object btnClear: TButton
+          Position.X = 712.000000000000000000
+          Position.Y = 56.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'cleareditbutton'
+          TabOrder = 5
+          Text = 'Button1'
+          OnClick = btnClearClick
+        end
+        object lblRect: TLabel
+          Position.X = 568.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'TRect(-1,-1,-1,-1)'
+          Visible = False
+          TabOrder = 6
+        end
+      end
+    end
+    object Memo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 261.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Memo pour test du contenu du presse papier'
+      ExplicitSize.cx = 261.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 781.000000000000000000
+        Size.Height = 551.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 777.000000000000000000
+        Viewport.Height = 547.000000000000000000
+      end
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    RecordCount = 30
+    FieldDefs = <
+      item
+        Name = 'Color1'
+        FieldType = ftUInteger
+        Generator = 'Colors'
+        ReadOnly = False
+      end
+      item
+        Name = 'ColorsName1'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactName1'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactTitle1'
+        Generator = 'ContactTitles'
+        ReadOnly = False
+      end
+      item
+        Name = 'CurrencyField1'
+        FieldType = ftCurrency
+        Generator = 'Currency'
+        ReadOnly = False
+      end
+      item
+        Name = 'DateField1'
+        Generator = 'Date'
+        ReadOnly = False
+      end
+      item
+        Name = 'FloatField1'
+        FieldType = ftSingle
+        Generator = 'Floats'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 601
+    Top = 88
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 604
+    Top = 173
+    object LinkGridToDataSourcePrototypeBindSource1: TLinkGridToDataSource
+      Category = 'Liaisons rapides'
+      DataSource = PrototypeBindSource1
+      GridControl = StringGrid1
+      Columns = <>
+    end
+  end
+end
