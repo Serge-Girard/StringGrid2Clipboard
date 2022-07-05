@@ -177,18 +177,23 @@ else begin
          if Selected.left=-1 then Selected.left:=Column.Index
                              else Selected.Right:=Column.Index;
          if Selected.Right=-1 then Selected.Right:=Selected.Left;
-//         if Selected.Right<Selected.Left then
-//             Selected.TopLeft:=TPoint.Create(-1,-1);
-       end;
+      end;
   if (Row>Selected.Top)
      then begin
        if Selected.Top=-1 then Selected.Top:=Row
                           else Selected.Bottom:=Row;
        if Selected.Bottom=-1 then Selected.Bottom:=Selected.Top;
-//       if Selected.Bottom<Selected.Top then
-//             Selected.BottomRight:=TPoint.Create(-1,-1);
       end;
-
+  if (Column.Index<Selected.Left)
+       then begin
+         Selected.Left:=-1;
+         Selected.Right:=-1;
+       end;
+  if (Row<Selected.Top)
+     then begin
+       Selected.Top:=-1;
+       Selected.Bottom:=-1;
+      end;
 end;
 ChangeSelected;
 StringGrid1.Repaint
